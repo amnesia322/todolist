@@ -12,7 +12,6 @@ const Accordion = (props: AccordionPropsType) => {
     return (
         <div>
             <AccordionTitle title={props.title}/>
-            <OnOff value={props.collapsed}/>
             {!props.collapsed &&  <AccordionBody/>}
         </div>
     );
