@@ -13,11 +13,11 @@ const UncontrolledRating = () => {
 
             return (
                 <div>
-                    <Star1 selected={value >= 1} id={1} changeValue={changeValue}/>
-                    <Star1 selected={value >= 2} id={2} changeValue={changeValue}/>
-                    <Star1 selected={value >= 3} id={3} changeValue={changeValue}/>
-                    <Star1 selected={value >= 4} id={4} changeValue={changeValue}/>
-                    <Star1 selected={value >= 5} id={5} changeValue={changeValue}/>
+                    <Star1 selected={value >= 1} value={1} changeValue={changeValue}/>
+                    <Star1 selected={value >= 2} value={2} changeValue={changeValue}/>
+                    <Star1 selected={value >= 3} value={3} changeValue={changeValue}/>
+                    <Star1 selected={value >= 4} value={4} changeValue={changeValue}/>
+                    <Star1 selected={value >= 5} value={5} changeValue={changeValue}/>
                 </div>
             );
 
@@ -25,13 +25,13 @@ const UncontrolledRating = () => {
 
 type Star1Props = {
     selected: boolean
-    id: ValueUncontrolledRating
+    value: ValueUncontrolledRating
     changeValue: (starID: ValueUncontrolledRating) => void
 }
 
 const Star1 = (props: Star1Props) => {
     return (
-        <span onClick={ () => props.changeValue(props.id)}>{props.selected ? <b> star </b> : ' star ' }</span>
+        <span onClick={ () => props.changeValue(props.value)}>{props.selected ? <b> star </b> : ' star ' }</span>
     );
 };
 
