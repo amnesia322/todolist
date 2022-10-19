@@ -63,12 +63,6 @@ test('correct todolist should change its name', () => {
 test('correct filter of todolist should be changed', () => {
     let newFilter: FilterValuesType = 'completed'
 
-    const action = {
-        type: 'CHANGE-TODOLIST-FILTER',
-        id: todolistId2,
-        filter: newFilter
-    }
-
     const endState = todolistsReducer(startState, changeTodolistFilterAC(todolistId2, newFilter))
 
     expect(endState[0].filter).toBe('all')
