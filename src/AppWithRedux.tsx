@@ -29,7 +29,7 @@ export type TasksStateType = {
 function AppWithRedux() {
 
     let todolists = useSelector<AppRootStateType, Array<TodolistType>>(state => state.todolists)
-    let tasks = useSelector<AppRootStateType, TasksStateType> (state => state.tasks)
+    let tasks = useSelector<AppRootStateType, TasksStateType>(state => state.tasks)
 
     const dispatch = useDispatch()
 
@@ -87,7 +87,6 @@ function AppWithRedux() {
                 <Grid container spacing={3}>
                     {
                         todolists.map(tl => {
-
 
 
                             return <Grid key={tl.id} item>
